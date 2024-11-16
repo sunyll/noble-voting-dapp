@@ -6,6 +6,9 @@ During the EthGlobal Bangkok hackathon, I tried to do the Scroll SDK Devnet set 
 ---
 
 ### **Issue 1: Configuration Adjustment**
+
+![Pending Blockscout pod](./images/blockscout_pending.png)
+
 - **Problem:** After running `make bootstrap`, I encountered errors related to Blockscout. Continuing with `make install`, the process stalled, and errors occurred.
 - **Solution:** The Minikube configuration was adjusted. Instead of using:
     ```bash
@@ -27,10 +30,10 @@ During the EthGlobal Bangkok hackathon, I tried to do the Scroll SDK Devnet set 
 ---
 
 ### **Issue 2: Blockscout Errors**
-- **Problem:** 
 
 ![Missing Blockscout ingresses](./images/code_blockscout_error.png)
 
+- **Problem:** 
 The `blockscout-blockscout-84554fb4dd-5cklw` pod remained in a `Pending` state. Additionally, `kubectl get ingress` did not list the expected `blockscout-backend-ingress` or `blockscout-frontend-ingress`.
 - **Solution:** This issue was left unresolved as it did not block further progress. Running `scrollsdk test ingress` confirmed Blockscout was unreachable, but the setup could still continue.
 
@@ -62,6 +65,9 @@ Both browsers worked when launched from the subsystem, allowing access to the Sc
 ---
 
 ### **Issue 4: Connecting Scroll SDK Chain RPC to MetaMask**
+
+![MetaMask error](./images/metamask_error.png)
+
 - **Problem:** Adding the Scroll SDK Chain to MetaMask in Chrome or Firefox on the host browser was not possible, as MetaMask did not allow me to save the network.
 - **Solution:** Installing MetaMask in the Ubuntu subsystem browsers (Chrome and Firefox) resolved this issue. I was able to add the Scroll SDK Chain using the following details:
   - **Network Name:** Scroll SDK Chain  
