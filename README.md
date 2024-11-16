@@ -13,7 +13,7 @@ During the EthGlobal Bangkok hackathon, I tried to do the Scroll SDK Devnet set 
     minikube config set cpus 8
     minikube config set memory 8192
     ```
-    or the recommended:
+    or the values used in the the video tutorial:
     ```bash
     minikube config set cpus 8
     minikube config set memory 6592
@@ -32,7 +32,7 @@ During the EthGlobal Bangkok hackathon, I tried to do the Scroll SDK Devnet set 
 ![Missing Blockscout ingresses](./images/code_blockscout_error.png)
 
 - **Problem:** 
-The `blockscout-blockscout-84554fb4dd-5cklw` pod remained in a `Pending` state. Additionally, `kubectl get ingress` did not list the expected `blockscout-backend-ingress` or `blockscout-frontend-ingress`.
+The `blockscout-blockscout-84554fb4dd-5cklw` pod remained in a `Pending` state. Additionally, `kubectl get ingress` did not list the expected `blockscout-backend-ingress`.
 - **Solution:** This issue was left unresolved as it did not block further progress. Running `scrollsdk test ingress` confirmed Blockscout was unreachable, but the setup could still continue.
 
 ---
