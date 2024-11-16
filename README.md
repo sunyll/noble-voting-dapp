@@ -7,8 +7,6 @@ During the EthGlobal Bangkok hackathon, I tried to do the Scroll SDK Devnet set 
 
 ### **Issue 1: Configuration Adjustment**
 
-![Pending Blockscout pod](./images/blockscout_pending.png)
-
 - **Problem:** After running `make bootstrap`, I encountered errors related to Blockscout. Continuing with `make install`, the process stalled, and errors occurred.
 - **Solution:** The Minikube configuration was adjusted. Instead of using:
     ```bash
